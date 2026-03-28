@@ -53,7 +53,9 @@ resource "aws_eks_node_group" "private_node_group" {
   node_role_arn   = aws_iam_role.eks_node_group_role.arn
 
   subnet_ids = var.private_subnet_ids
+ instance_types = [var.private_nodes_type]
 
+ labels = var.private_nodes_labels
   launch_template {
     id      = aws_launch_template.eks_nodes_launch_template.id
     version = "$Latest"
@@ -85,7 +87,9 @@ resource "aws_eks_node_group" "public_node_group" {
   node_role_arn   = aws_iam_role.eks_node_group_role.arn
 
   subnet_ids = var.public_subnet_ids
+  instance_types = [var.public_nodes_type]
 
+labels = var.public_nodes_labels
   launch_template {
     id      = aws_launch_template.eks_nodes_launch_template.id
     version = "$Latest"

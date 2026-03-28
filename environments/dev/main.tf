@@ -43,7 +43,11 @@ module "nodegroups" {
   public_nodes_min      = var.public_nodes_min
   public_nodes_max      = var.public_nodes_max
   public_nodes_des      = var.public_nodes_des
+public_nodes_type   = var.public_nodes_type
+public_nodes_labels = var.public_nodes_labels
 
+private_nodes_type   = var.private_nodes_type
+private_nodes_labels = var.private_nodes_labels
   private_nodes_capacity = var.private_nodes_capacity
   private_nodes_min      = var.private_nodes_min
   private_nodes_max      = var.private_nodes_max

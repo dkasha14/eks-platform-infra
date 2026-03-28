@@ -82,3 +82,22 @@ variable "private_nodes_des" {
 variable "kubernetes_version" {
   type = string
 }
+# Public node instance type
+variable "public_nodes_type" {
+  type = string
+}
+
+# Public node labels
+variable "public_nodes_labels" {
+  type = map(string)
+}
+
+# Private node instance type
+variable "private_nodes_type" {
+  type = string
+}
+
+# Private node labels
+variable "private_nodes_labels" {
+  type = map(string)
+}

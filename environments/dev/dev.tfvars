@@ -10,7 +10,11 @@ public_subnets  = ["10.10.10.0/24", "10.10.15.0/24"]
 private_subnets = ["10.10.20.0/24", "10.10.25.0/24"]
 
 availability_zones = ["us-east-1a", "us-east-1b"]
+public_nodes_type   = "t2.medium"
+public_nodes_labels = { env = "public" }
 
+private_nodes_type   = "t2.small"
+private_nodes_labels = { env = "private" }
 # Node groups – DEV sizing
 public_nodes_capacity = "ON_DEMAND"
 public_nodes_min      = 1
